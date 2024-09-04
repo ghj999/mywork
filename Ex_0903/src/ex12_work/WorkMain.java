@@ -1,5 +1,8 @@
 package ex12_work;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class WorkMain {
 	public static void main(String[] args) {
 		
@@ -16,6 +19,39 @@ public class WorkMain {
 		//정답
 		//결과 : 24초
 		
+		Random rnd = new Random();
+		Scanner sc = new Scanner(System.in);
+		int playCount = 0;
+		final int FINISH = 5;
+		
+		ThreadTimer tt = new ThreadTimer();
+		tt.start();
+		
+		while( true ) {
+		
+			int su1 = rnd.nextInt(100) + 1;
+			int su2 = rnd.nextInt(100) + 1;
+			
+			System.out.printf("%d + %d = ", su1, su2);
+			
+			int res = sc.nextInt();
+			
+			if(res == (su1 + su2)) {
+				System.out.println("정답");
+				playCount++
+			}else {
+				System.out.println("오답");
+			}
+			
+			//게임종료 처리
+			if (playCount == 5) {
+				tt.setFin
+				break;
+			}
+			
+			
+		}//while
+				
 	}//main
 }
 
@@ -23,3 +59,4 @@ public class WorkMain {
 //문제가 어려워서 굉장히 화가 나네. 
 // 내가 할 수 있을가? 어??
 
+//이 문제 다시 반복. 마스터. 

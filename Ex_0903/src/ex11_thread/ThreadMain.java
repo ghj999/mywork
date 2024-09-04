@@ -8,20 +8,13 @@ public class ThreadMain {
 		//0이 되었을 때 스레드를 종료하는 코드를 작성
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("입력 : ");
+		int num = sc.nextInt();
 		
-		MyThread t = new MyThread();
+		ThreadCount t = new ThreadCount();
+		t.setNum(num);
+		
 		t.start();
-		
-		for(int i = 0; i < 10; i++ ) {
-			System.out.println("메인스레드" + i);
-			
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}//for
 		
 		
 	}//main
