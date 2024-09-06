@@ -14,8 +14,9 @@ public class Ex4_String {
 		Scanner sc = new Scanner(System.in);  
 		System.out.print("입력 : ");
 		String alpha = sc.next();
-				
-		for (i = 0 ; i < alpha.length(); i++ ) {
+		
+		int cnt = 0;
+		for (int i = 0 ; i < alpha.length(); i++ ) {
 			if ( alpha.charAt(i) == 'a') {
 				cnt++;
 			}
